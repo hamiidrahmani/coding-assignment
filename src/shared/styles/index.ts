@@ -1,1 +1,2 @@
-export {};
+export * from "./theme.css";
+import "./global.css";
