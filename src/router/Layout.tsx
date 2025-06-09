@@ -35,6 +35,7 @@ export function Layout() {
                 variant="text"
                 color="common.white"
                 size="small"
+                component="span"
                 endIcon={
                   <Badge className={styles.badge} color="common.white">
                     0
@@ -54,6 +55,7 @@ export function Layout() {
                 variant="text"
                 color="common.white"
                 size="small"
+                component="span"
                 endIcon={
                   <Badge className={styles.badge} color="common.white">
                     0
