@@ -3,6 +3,7 @@ import { AppBarTop, Toolbar } from "@/shared/components/app-bar-top";
 import { Badge } from "@/shared/components/badge";
 import { Button } from "@/shared/components/button";
 import { Icon, IconButton } from "@/shared/components/icon";
+import { useFavoriteState } from "@/shared/store";
 import clsx from "clsx";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import * as styles from "./Layout.css";
@@ -11,6 +12,7 @@ const FAVORITE_PATH = "/favorite";
 const WATCH_LATER_PATH = "/watch-later";
 
 export function Layout() {
+  const favorite = useFavoriteState((state) => state.favorite);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -38,7 +40,7 @@ export function Layout() {
                 component="span"
                 endIcon={
                   <Badge className={styles.badge} color="common.white">
-                    0
+                    {favorite.length}
                   </Badge>
                 }
               >
