@@ -88,7 +88,8 @@ docker compose up -d prod
 ## 📚 Areas for Improvement
 
 - [ ] **Add List Virtualization** – Implement list virtualization (e.g., with `react-window`) for movie lists to improve performance on large datasets.
-- [ ] **Add GitHub Actions CI** – Automate linting, testing, and build checks with GitHub Actions for continuous integration.
 - [ ] **Integrate E2E Testing** – Use [Playwright](https://playwright.dev/) for end-to-end testing to ensure critical user flows work as expected.
 - [ ] **Explore Biome** – Consider using [Biome](https://biomejs.dev/) as a faster, Rust-based alternative to Prettier and ESLint.
 - [ ] **Package Manager Optimization** – Evaluate using [`yarn`](https://yarnpkg.com/) or [`pnpm`](https://pnpm.io/) for improved dependency resolution speed and efficiency.
+
+---
