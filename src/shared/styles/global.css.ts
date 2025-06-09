@@ -38,5 +38,4 @@ globalStyle("button", {
   fontSize: "inherit",
   cursor: "pointer",
   border: "none",
-  outline: "none",
 });
