@@ -1,0 +1,28 @@
+services:
+  dev:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    command: sh -c "npm ci && npm run dev"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+
+  prod:
+    build:
+      context: .
+    ports:
+      - "4173:4173"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
